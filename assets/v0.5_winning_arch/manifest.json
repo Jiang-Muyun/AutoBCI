@@ -11,7 +11,7 @@
       "round_index": 6,
       "search_name": "claude-opus-5-5",
       "selection_metric": "mean_task_best_validation_bacc",
-      "source_sha256": "49590f68941c76a9a7b14c8ed9536a8622a23b4b5ab5d108508cbeafdfecfdb8",
+      "source_sha256": "a330c325eeee68a38b1248a1b73ceaa206d12487821b295974181e3df630654d",
       "task_validation_scores": {
         "emotion": 0.5113106258338234,
         "mi": 0.7310444288826128,
@@ -78,7 +78,7 @@
       "round_index": 6,
       "search_name": "claude-sonnet-5",
       "selection_metric": "mean_task_best_validation_bacc",
-      "source_sha256": "6d0c805b799cf238c5525112dc75b45968924be0f61b8974f6e0b4698ae9bbd7",
+      "source_sha256": "caf3959bda89d2442c7121030964ecc99313f93cf1fb677b1a0945432f01b422",
       "task_validation_scores": {
         "emotion": 0.483007976859184,
         "mi": 0.6082939594743015,
@@ -145,7 +145,7 @@
       "round_index": 6,
       "search_name": "deepseek-v4.1-flash",
       "selection_metric": "mean_task_best_validation_bacc",
-      "source_sha256": "a72dcda43398ce1ab081c01202bd42b028fce217389ac723f2bf7f0f1fcacd23",
+      "source_sha256": "aaab9f46676d09c630804b57f571fe6624d938df76e44ab967e985eff70e50c4",
       "task_validation_scores": {
         "emotion": 0.49581108805860774,
         "mi": 0.6648903031973207,
@@ -212,7 +212,7 @@
       "round_index": 6,
       "search_name": "gemini-3.8-flash",
       "selection_metric": "mean_task_best_validation_bacc",
-      "source_sha256": "6c02df0672e14eeab6d19049017560ae7c0c8338cb1b02f73cb3ee315a6a964a",
+      "source_sha256": "6eda1920868173e8778d45fdc3b5f10adace7b2f3997b4d91c79fae049be0b50",
       "task_validation_scores": {
         "emotion": 0.4743448749020338,
         "mi": 0.687030358057676,
@@ -279,7 +279,7 @@
       "round_index": 6,
       "search_name": "gpt-5.6-sol",
       "selection_metric": "mean_task_best_validation_bacc",
-      "source_sha256": "cf81dcfe6fdfa4f06c3040fab6334396f2ce89ad97d1b13f07fec38cf8c91e20",
+      "source_sha256": "30f001aa0a46d037576d79d7383b467b9c16df310bb8f49bd5c80fbd3cb3abfe",
       "task_validation_scores": {
         "emotion": 0.46191173245102474,
         "mi": 0.6685455500838539,
@@ -346,7 +346,7 @@
       "round_index": 6,
       "search_name": "qwen3.8-flash",
       "selection_metric": "mean_task_best_validation_bacc",
-      "source_sha256": "b2df3c660d14ef6a90ffcb288420d9a440c879c260436ab272537c7e98f98c8e",
+      "source_sha256": "49492d5fa1a947bf30e64ea91bd0432fc856faad2d8dde625a73e7b12ae4f8a4",
       "task_validation_scores": {
         "emotion": 0.43339626039301665,
         "mi": 0.5894641490237726,

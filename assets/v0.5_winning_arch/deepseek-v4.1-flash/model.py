@@ -1,10 +1,3 @@
-"""
-Define the winning multi-kernel covariance-pooling architecture from the DeepSeek V4.1 Flash search.
-
-Copyright 2022 Centre for Brain Computing Research (CBCR), College of Computing and Data Science (CCDS), Nanyang Technological University (NTU);
-licensed under the CBCR License 1.0 (see LICENSE).
-"""
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

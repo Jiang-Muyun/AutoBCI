@@ -1,8 +1,6 @@
+# License: see LICENSE.
 """
 Load independent EEG splits as disk batches or normalized BF16 RAM caches.
-
-Copyright 2022 Centre for Brain Computing Research (CBCR), College of Computing and Data Science (CCDS), Nanyang Technological University (NTU);
-licensed under the CBCR License 1.0 (see LICENSE).
 """
 
 from __future__ import annotations
@@ -176,6 +174,7 @@ class CombinedData:
         self.validation_fraction = float(catalog["validation_fraction"])
         self.refs = {split: [] for split in ("train", "valid", "test")}
         self.splits: dict[str, DiskSplit] = {}
+        self._split_manifests = {}
 
         root_value = catalog.get("path")
         root_base = catalog_path.parent
@@ -267,7 +266,13 @@ class CombinedData:
             subjects = list(h5.keys())
             if saved_splits:
                 if "split_manifest" in spec:
-                    metadata = yaml.safe_load((path.parent / spec["split_manifest"]).read_text())
+                    manifest_path = path.parent / spec["split_manifest"]
+                    if manifest_path not in self._split_manifests:
+                        self._split_manifests[manifest_path] = yaml.load(
+                            manifest_path.read_text(),
+                            Loader=getattr(yaml, "CSafeLoader", yaml.SafeLoader),
+                        )
+                    metadata = self._split_manifests[manifest_path]
                     if metadata["export"]["sample_shape"] != list(self.input_shape):
                         raise ValueError(f"Manifest input shape differs from catalog: {path}")
                     if metadata["labels"] != spec["labels"] or not metadata["complete"]:

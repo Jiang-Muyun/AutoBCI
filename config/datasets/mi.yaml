@@ -2,10 +2,13 @@
 input_shape: [65, 800]
 validation_fraction: 0.20
 
+# Subject counts follow LEAF load_datasets.py SUBJECT_SPLITS, in HDF5 key order.
+# Every fifth retained trial from these subjects is validation; remaining subjects are test.
 # Motor imagery datasets. Labels are local to each source; equal semantic labels share a class.
 datasets:
   MI_BCIC_IV2a:
     filename: MI_BCIC_IV2a.h5
+    train_subjects: 7
     family: motor_imagery
     layout: subjects
     labels: [Left, Right, Foot, Tongue]
@@ -13,6 +16,7 @@ datasets:
 
   MI_BCIC_Upperlimb:
     filename: MI_BCIC_Upperlimb.h5
+    train_subjects: 11
     family: motor_imagery
     layout: subjects
     labels: [Cylin, Sphe, Lumbrical]
@@ -20,6 +24,7 @@ datasets:
 
   MI_Cho2017:
     filename: MI_Cho2017.h5
+    train_subjects: 40
     family: motor_imagery
     layout: subjects
     labels: [Left, Right]
@@ -27,6 +32,7 @@ datasets:
 
   MI_HighGamma:
     filename: MI_HighGamma.h5
+    train_subjects: 10
     family: motor_imagery
     layout: subjects
     labels: [Left, Right, excluded_2]
@@ -35,6 +41,7 @@ datasets:
 
   MI_OpenBMI:
     filename: MI_OpenBMI.h5
+    train_subjects: 42
     family: motor_imagery
     layout: subjects
     labels: [Right, Left]
@@ -42,6 +49,7 @@ datasets:
 
   MI_PhysioNet:
     filename: MI_PhysioNet.h5
+    train_subjects: 80
     family: motor_imagery
     layout: subjects
     labels: [Left, Right]
@@ -49,6 +57,7 @@ datasets:
 
   MI_ShanghaiU:
     filename: MI_ShanghaiU.h5
+    train_subjects: 20
     family: motor_imagery
     layout: subjects
     labels: [Right, Left]
@@ -56,6 +65,7 @@ datasets:
 
   MI_Shin2017A:
     filename: MI_Shin2017A.h5
+    train_subjects: 22
     family: motor_imagery
     layout: subjects
     labels: [Left, Right]
