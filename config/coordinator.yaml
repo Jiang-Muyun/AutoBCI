@@ -1,0 +1,5 @@
+launch_delay_seconds: 10  # Minimum interval between starts and before OOM retries; must be >= 10.
+gpu_utilization_threshold: 0.75  # Below this used-VRAM fraction, prefer fewer running tasks.
+max_tasks_per_gpu: 3
+capacity_wait_seconds: 5
+training_timeout_seconds: 1200  # Per candidate/task worker, including verification and data loading.

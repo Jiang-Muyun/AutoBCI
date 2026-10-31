@@ -1,0 +1,57 @@
+name: emotion_mi_sleep_architecture_search
+
+data:
+  tasks:
+    emotion: config/datasets/emotion.yaml
+    mi: config/datasets/mi.yaml
+    sleep: config/datasets/sleep.yaml
+  label_policy: shared_semantic
+  storage: ram_bf16
+  preload_batch_size: 512
+  num_workers: 0
+  prefetch_factor: 2  # Used only when num_workers > 0.
+
+training:
+  epochs: 40
+  early_epochs: 20
+  batch_size: 512
+  precision: bf16_full  # BF16 weights, gradients, and AdamW moments; bf16 uses AMP.
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  gradient_clip_norm: 5.0
+  seed: 0
+  cpu_threads: 2
+  optimizer: AdamW
+  fused_optimizer: true
+  cuda:
+    cudnn_benchmark: true
+    cudnn_benchmark_limit: 10
+    cudnn_deterministic: false
+    float32_matmul_precision: medium
+    cudnn_allow_tf32: true
+    bf16_reduced_precision_reduction: true
+
+search:
+  name: claude-opus-5-5
+  model: claude-opus-5-5
+  harness: claude-code
+  harness_settings: config/harnesses.yaml
+  rounds: 6
+  new_candidates: 8
+  parent_count: 2
+  refinements_per_parent: 3
+  explorations: 2
+  forecast_enabled: false  # Independent task training uses the full budget.
+  promote_count: 2  # Used only when forecasting is enabled.
+  max_parameters: 1000000
+  reasoning_effort: medium
+  generation_timeout_seconds: 600
+
+evaluation:
+  selection_metric: mean_dataset_balanced_accuracy
+  checkpoint_policy: one_common_epoch
+  mask_invalid_logits: negative_infinity
+  test_when: explicit_after_search
+
+output:
+  root: runs  # Relative to the project root.

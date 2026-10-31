@@ -1,0 +1,26 @@
+# Filenames are relative to the sleep directory in ../path.yaml.
+# Full 30-second epochs at 100 Hz; ordered channels: Fpz, F3, F4, C3, C4, Pz, O1, O2.
+input_shape: [8, 3000]
+validation_fraction: 0.20  # Unused here: preserve the HDF5 subject split manifests.
+
+datasets:
+  SLEEP_EDF:
+    filename: SLEEP_EDF.h5
+    family: sleep
+    layout: subject_splits
+    labels: [Wake, N1, N2, N3, REM]
+    input_samples: 3000
+
+  SLEEP_HMC:
+    filename: SLEEP_HMC.h5
+    family: sleep
+    layout: subject_splits
+    labels: [Wake, N1, N2, N3, REM]
+    input_samples: 3000
+
+  SLEEP_ISRUC:
+    filename: SLEEP_ISRUC.h5
+    family: sleep
+    layout: subject_splits
+    labels: [Wake, N1, N2, N3, REM]
+    input_samples: 3000

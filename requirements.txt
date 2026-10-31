@@ -1,0 +1,6 @@
+# Tested with Python 3.14 on Linux; the PyPI torch wheel includes CUDA libraries.
+torch==2.14.1
+numpy==2.5.2
+h5py==3.16.0
+PyYAML==6.0.3
+jsonschema==4.26.0

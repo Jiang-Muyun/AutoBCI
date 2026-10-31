@@ -1,0 +1,62 @@
+# Filenames are relative to the mi directory in ../path.yaml.
+input_shape: [65, 800]
+validation_fraction: 0.20
+
+# Motor imagery datasets. Labels are local to each source; equal semantic labels share a class.
+datasets:
+  MI_BCIC_IV2a:
+    filename: MI_BCIC_IV2a.h5
+    family: motor_imagery
+    layout: subjects
+    labels: [Left, Right, Foot, Tongue]
+    input_samples: 800
+
+  MI_BCIC_Upperlimb:
+    filename: MI_BCIC_Upperlimb.h5
+    family: motor_imagery
+    layout: subjects
+    labels: [Cylin, Sphe, Lumbrical]
+    input_samples: 800
+
+  MI_Cho2017:
+    filename: MI_Cho2017.h5
+    family: motor_imagery
+    layout: subjects
+    labels: [Left, Right]
+    input_samples: 800
+
+  MI_HighGamma:
+    filename: MI_HighGamma.h5
+    family: motor_imagery
+    layout: subjects
+    labels: [Left, Right, excluded_2]
+    input_samples: 800
+    include_local_labels: [0, 1]
+
+  MI_OpenBMI:
+    filename: MI_OpenBMI.h5
+    family: motor_imagery
+    layout: subjects
+    labels: [Right, Left]
+    input_samples: 800
+
+  MI_PhysioNet:
+    filename: MI_PhysioNet.h5
+    family: motor_imagery
+    layout: subjects
+    labels: [Left, Right]
+    input_samples: 800
+
+  MI_ShanghaiU:
+    filename: MI_ShanghaiU.h5
+    family: motor_imagery
+    layout: subjects
+    labels: [Right, Left]
+    input_samples: 800
+
+  MI_Shin2017A:
+    filename: MI_Shin2017A.h5
+    family: motor_imagery
+    layout: subjects
+    labels: [Left, Right]
+    input_samples: 800

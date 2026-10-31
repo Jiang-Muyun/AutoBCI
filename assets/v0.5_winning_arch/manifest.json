@@ -1,0 +1,406 @@
+{
+  "architectures": [
+    {
+      "candidate_id": "r06_p1_00_p2_stst_add_se_gating",
+      "experiment_config": "assets/v0.5_winning_arch/claude-opus-5-5/experiment.yaml",
+      "generator_model": "claude-opus-5-5",
+      "harness": "claude-code",
+      "model_file": "claude-opus-5-5/model.py",
+      "original_response_sha256": "40b71989391141056c002c0a387597edf3c656dad01216aa915bf69cfb33ab54",
+      "original_source_sha256": "a330c325eeee68a38b1248a1b73ceaa206d12487821b295974181e3df630654d",
+      "round_index": 6,
+      "search_name": "claude-opus-5-5",
+      "selection_metric": "mean_task_best_validation_bacc",
+      "source_sha256": "49590f68941c76a9a7b14c8ed9536a8622a23b4b5ab5d108508cbeafdfecfdb8",
+      "task_validation_scores": {
+        "emotion": 0.5113106258338234,
+        "mi": 0.7310444288826128,
+        "sleep": 0.7455748401173498
+      },
+      "tasks": {
+        "emotion": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "emotion::Positive",
+            "emotion::Neutral",
+            "emotion::Negative",
+            "emotion::Sad",
+            "emotion::Fear",
+            "emotion::Happy",
+            "emotion::Disgust"
+          ],
+          "n_classes": 7
+        },
+        "mi": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "motor_imagery::Left",
+            "motor_imagery::Right",
+            "motor_imagery::Foot",
+            "motor_imagery::Tongue",
+            "motor_imagery::Cylin",
+            "motor_imagery::Sphe",
+            "motor_imagery::Lumbrical"
+          ],
+          "n_classes": 7
+        },
+        "sleep": {
+          "input_shape": [
+            8,
+            3000
+          ],
+          "labels": [
+            "sleep::Wake",
+            "sleep::N1",
+            "sleep::N2",
+            "sleep::N3",
+            "sleep::REM"
+          ],
+          "n_classes": 5
+        }
+      },
+      "validation_score": 0.6626432982779287
+    },
+    {
+      "candidate_id": "r06_p0_02_se_hidden48_v1",
+      "experiment_config": "assets/v0.5_winning_arch/claude-sonnet-5/experiment.yaml",
+      "generator_model": "claude-sonnet-5",
+      "harness": "claude-code",
+      "model_file": "claude-sonnet-5/model.py",
+      "original_response_sha256": "76af0346cab60c9ee376cea8ccf19aad965a4954ebfe45c0fa72a5c7faaecb1a",
+      "original_source_sha256": "caf3959bda89d2442c7121030964ecc99313f93cf1fb677b1a0945432f01b422",
+      "round_index": 6,
+      "search_name": "claude-sonnet-5",
+      "selection_metric": "mean_task_best_validation_bacc",
+      "source_sha256": "6d0c805b799cf238c5525112dc75b45968924be0f61b8974f6e0b4698ae9bbd7",
+      "task_validation_scores": {
+        "emotion": 0.483007976859184,
+        "mi": 0.6082939594743015,
+        "sleep": 0.7089522772744649
+      },
+      "tasks": {
+        "emotion": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "emotion::Positive",
+            "emotion::Neutral",
+            "emotion::Negative",
+            "emotion::Sad",
+            "emotion::Fear",
+            "emotion::Happy",
+            "emotion::Disgust"
+          ],
+          "n_classes": 7
+        },
+        "mi": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "motor_imagery::Left",
+            "motor_imagery::Right",
+            "motor_imagery::Foot",
+            "motor_imagery::Tongue",
+            "motor_imagery::Cylin",
+            "motor_imagery::Sphe",
+            "motor_imagery::Lumbrical"
+          ],
+          "n_classes": 7
+        },
+        "sleep": {
+          "input_shape": [
+            8,
+            3000
+          ],
+          "labels": [
+            "sleep::Wake",
+            "sleep::N1",
+            "sleep::N2",
+            "sleep::N3",
+            "sleep::REM"
+          ],
+          "n_classes": 5
+        }
+      },
+      "validation_score": 0.6000847378693168
+    },
+    {
+      "candidate_id": "r06_p0_01_dks3_kernel4_bank",
+      "experiment_config": "assets/v0.5_winning_arch/deepseek-v4.1-flash/experiment.yaml",
+      "generator_model": "deepseek-flash",
+      "harness": "claude-code",
+      "model_file": "deepseek-v4.1-flash/model.py",
+      "original_response_sha256": "ecd5cfa92932cd7c6cfacb5d9a18a8a98a066bd443f0b6d712bb85d4b3a9b0d1",
+      "original_source_sha256": "aaab9f46676d09c630804b57f571fe6624d938df76e44ab967e985eff70e50c4",
+      "round_index": 6,
+      "search_name": "deepseek-v4.1-flash",
+      "selection_metric": "mean_task_best_validation_bacc",
+      "source_sha256": "a72dcda43398ce1ab081c01202bd42b028fce217389ac723f2bf7f0f1fcacd23",
+      "task_validation_scores": {
+        "emotion": 0.49581108805860774,
+        "mi": 0.6648903031973207,
+        "sleep": 0.7322719673699792
+      },
+      "tasks": {
+        "emotion": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "emotion::Positive",
+            "emotion::Neutral",
+            "emotion::Negative",
+            "emotion::Sad",
+            "emotion::Fear",
+            "emotion::Happy",
+            "emotion::Disgust"
+          ],
+          "n_classes": 7
+        },
+        "mi": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "motor_imagery::Left",
+            "motor_imagery::Right",
+            "motor_imagery::Foot",
+            "motor_imagery::Tongue",
+            "motor_imagery::Cylin",
+            "motor_imagery::Sphe",
+            "motor_imagery::Lumbrical"
+          ],
+          "n_classes": 7
+        },
+        "sleep": {
+          "input_shape": [
+            8,
+            3000
+          ],
+          "labels": [
+            "sleep::Wake",
+            "sleep::N1",
+            "sleep::N2",
+            "sleep::N3",
+            "sleep::REM"
+          ],
+          "n_classes": 5
+        }
+      },
+      "validation_score": 0.6309911195419692
+    },
+    {
+      "candidate_id": "r06_x00_r06_exp_01_filterbank_tcn",
+      "experiment_config": "assets/v0.5_winning_arch/gemini-3.8-flash/experiment.yaml",
+      "generator_model": "gemini-3.8-flash",
+      "harness": "gemini",
+      "model_file": "gemini-3.8-flash/model.py",
+      "original_response_sha256": "42840b7f7099ab874b9a9c13ab482640674890e422774bf38552dca0607ace6f",
+      "original_source_sha256": "6eda1920868173e8778d45fdc3b5f10adace7b2f3997b4d91c79fae049be0b50",
+      "round_index": 6,
+      "search_name": "gemini-3.8-flash",
+      "selection_metric": "mean_task_best_validation_bacc",
+      "source_sha256": "6c02df0672e14eeab6d19049017560ae7c0c8338cb1b02f73cb3ee315a6a964a",
+      "task_validation_scores": {
+        "emotion": 0.4743448749020338,
+        "mi": 0.687030358057676,
+        "sleep": 0.7461785116018905
+      },
+      "tasks": {
+        "emotion": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "emotion::Positive",
+            "emotion::Neutral",
+            "emotion::Negative",
+            "emotion::Sad",
+            "emotion::Fear",
+            "emotion::Happy",
+            "emotion::Disgust"
+          ],
+          "n_classes": 7
+        },
+        "mi": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "motor_imagery::Left",
+            "motor_imagery::Right",
+            "motor_imagery::Foot",
+            "motor_imagery::Tongue",
+            "motor_imagery::Cylin",
+            "motor_imagery::Sphe",
+            "motor_imagery::Lumbrical"
+          ],
+          "n_classes": 7
+        },
+        "sleep": {
+          "input_shape": [
+            8,
+            3000
+          ],
+          "labels": [
+            "sleep::Wake",
+            "sleep::N1",
+            "sleep::N2",
+            "sleep::N3",
+            "sleep::REM"
+          ],
+          "n_classes": 5
+        }
+      },
+      "validation_score": 0.6358512481872002
+    },
+    {
+      "candidate_id": "r06_p1_01_r06_broader_intermediate_stem",
+      "experiment_config": "assets/v0.5_winning_arch/gpt-5.6-sol/experiment.yaml",
+      "generator_model": "gpt-5.6-sol",
+      "harness": "codex",
+      "model_file": "gpt-5.6-sol/model.py",
+      "original_response_sha256": "1e427ad3ba62a2113ae633f71e46af21a11028b12352f525ed4d48391372620d",
+      "original_source_sha256": "30f001aa0a46d037576d79d7383b467b9c16df310bb8f49bd5c80fbd3cb3abfe",
+      "round_index": 6,
+      "search_name": "gpt-5.6-sol",
+      "selection_metric": "mean_task_best_validation_bacc",
+      "source_sha256": "cf81dcfe6fdfa4f06c3040fab6334396f2ce89ad97d1b13f07fec38cf8c91e20",
+      "task_validation_scores": {
+        "emotion": 0.46191173245102474,
+        "mi": 0.6685455500838539,
+        "sleep": 0.7474729885222541
+      },
+      "tasks": {
+        "emotion": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "emotion::Positive",
+            "emotion::Neutral",
+            "emotion::Negative",
+            "emotion::Sad",
+            "emotion::Fear",
+            "emotion::Happy",
+            "emotion::Disgust"
+          ],
+          "n_classes": 7
+        },
+        "mi": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "motor_imagery::Left",
+            "motor_imagery::Right",
+            "motor_imagery::Foot",
+            "motor_imagery::Tongue",
+            "motor_imagery::Cylin",
+            "motor_imagery::Sphe",
+            "motor_imagery::Lumbrical"
+          ],
+          "n_classes": 7
+        },
+        "sleep": {
+          "input_shape": [
+            8,
+            3000
+          ],
+          "labels": [
+            "sleep::Wake",
+            "sleep::N1",
+            "sleep::N2",
+            "sleep::N3",
+            "sleep::REM"
+          ],
+          "n_classes": 5
+        }
+      },
+      "validation_score": 0.6259767570190442
+    },
+    {
+      "candidate_id": "r06_x01_exp_temporal_stats_dispersion",
+      "experiment_config": "assets/v0.5_winning_arch/qwen3.8-flash/experiment.yaml",
+      "generator_model": "qwen3.8-flash",
+      "harness": "claude-code",
+      "model_file": "qwen3.8-flash/model.py",
+      "original_response_sha256": "dc2271ea7ef8444f7ed9c686e66fba998444f0191b173cbf0c43f77c3ddfc250",
+      "original_source_sha256": "49492d5fa1a947bf30e64ea91bd0432fc856faad2d8dde625a73e7b12ae4f8a4",
+      "round_index": 6,
+      "search_name": "qwen3.8-flash",
+      "selection_metric": "mean_task_best_validation_bacc",
+      "source_sha256": "b2df3c660d14ef6a90ffcb288420d9a440c879c260436ab272537c7e98f98c8e",
+      "task_validation_scores": {
+        "emotion": 0.43339626039301665,
+        "mi": 0.5894641490237726,
+        "sleep": 0.7299753565768748
+      },
+      "tasks": {
+        "emotion": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "emotion::Positive",
+            "emotion::Neutral",
+            "emotion::Negative",
+            "emotion::Sad",
+            "emotion::Fear",
+            "emotion::Happy",
+            "emotion::Disgust"
+          ],
+          "n_classes": 7
+        },
+        "mi": {
+          "input_shape": [
+            65,
+            800
+          ],
+          "labels": [
+            "motor_imagery::Left",
+            "motor_imagery::Right",
+            "motor_imagery::Foot",
+            "motor_imagery::Tongue",
+            "motor_imagery::Cylin",
+            "motor_imagery::Sphe",
+            "motor_imagery::Lumbrical"
+          ],
+          "n_classes": 7
+        },
+        "sleep": {
+          "input_shape": [
+            8,
+            3000
+          ],
+          "labels": [
+            "sleep::Wake",
+            "sleep::N1",
+            "sleep::N2",
+            "sleep::N3",
+            "sleep::REM"
+          ],
+          "n_classes": 5
+        }
+      },
+      "validation_score": 0.5842785886645547
+    }
+  ]
+}

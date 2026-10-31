@@ -1,0 +1,33 @@
+# Local environments and dependencies
+.venv/
+node_modules/
+
+# Python bytecode and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Test suite
+tests/
+
+# Local credentials and private integrations
+.env
+.env.*
+private_apis/
+
+# Datasets, experiment outputs, and model checkpoints
+data/
+runs/
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+*.log
+
+# Editor and operating system files
+.idea/
+.vscode/
+.DS_Store

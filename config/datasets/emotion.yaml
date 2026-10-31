@@ -1,0 +1,24 @@
+# Filenames are relative to the emotion directory in ../path.yaml.
+input_shape: [65, 800]
+validation_fraction: 0.20
+datasets:
+  EMO_SEED_3:
+    filename: EMO_SEED_3_seg4.h5
+    family: emotion
+    layout: predefined
+    labels: [Positive, Neutral, Negative]
+    input_samples: 800
+
+  EMO_SEED_4:
+    filename: EMO_SEED_4_seg4.h5
+    family: emotion
+    layout: predefined
+    labels: [Neutral, Sad, Fear, Happy]
+    input_samples: 800
+
+  EMO_SEED_5:
+    filename: EMO_SEED_5_seg4.h5
+    family: emotion
+    layout: predefined
+    labels: [Disgust, Fear, Sad, Neutral, Happy]
+    input_samples: 800
