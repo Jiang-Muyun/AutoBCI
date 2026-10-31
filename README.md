@@ -1,15 +1,10 @@
 # AutoBCI: Forecast-Guided Agentic Neural Architecture Discovery for EEG-Based Brain–Computer Interfaces
 
+[Paper](https://arxiv.org/abs/2609.35456) · [Winners](assets/v0.5_winners/)
+
 > **v0.5 pre-release.** This repository is an early release of AutoBCI.
 
-AutoBCI uses language-model agents to discover compact neural network architectures for EEG-based brain–computer interfaces. The agents propose model code, train and evaluate candidates, and use validation feedback to improve the next round of designs.
-
-There are two ways to use this repository:
-
-| Your goal | Start here | What you need |
-| --- | --- | --- |
-| **1. Run the agent search loop** to discover new architectures on your data | [Run the agent search loop](#1-run-the-agent-search-loop) | Prepared EEG datasets, a training GPU, and access to a supported model CLI |
-| **2. Inspect the authors’ winning rounds** from completed searches | [Inspect the authors’ winning rounds](#2-inspect-the-authors-winning-rounds) | A browser or editor to read the code; PyTorch to try the example |
+**AutoBCI** uses language-model agents to discover compact neural network architectures for EEG-based brain–computer interfaces. The agents propose model code, train and evaluate candidates, and use validation feedback to improve the next round of designs.
 
 The repository includes the search loop, training code, experiment configurations, GPU coordinator, and six winning architecture definitions. **Datasets, preparation and preprocessing tools, and data-loading code will be released in a future version.**
 
@@ -89,18 +84,18 @@ The combined results are written to `runs/gpt-6-sol/champion/test.json` with the
 
 Use this workflow to inspect the winning architectures from the authors’ search rounds. The manifest records the round and candidate ID for each winner. You can read all six implementations without setting up datasets, a GPU, or model-provider access.
 
-Start in [assets/v0.5_winning_arch/](assets/v0.5_winning_arch/):
+Start in [assets/v0.5_winners/](assets/v0.5_winners/):
 
 | Search model | Winning architecture | Saved experiment settings |
 | --- | --- | --- |
-| Claude Opus 5.5 | [model.py](assets/v0.5_winning_arch/claude-opus-5-5/model.py) | [experiment.yaml](assets/v0.5_winning_arch/claude-opus-5-5/experiment.yaml) |
-| Claude Sonnet 5 | [model.py](assets/v0.5_winning_arch/claude-sonnet-5/model.py) | [experiment.yaml](assets/v0.5_winning_arch/claude-sonnet-5/experiment.yaml) |
-| DeepSeek V4.1 Flash | [model.py](assets/v0.5_winning_arch/deepseek-v4.1-flash/model.py) | [experiment.yaml](assets/v0.5_winning_arch/deepseek-v4.1-flash/experiment.yaml) |
-| Gemini 3.8 Flash | [model.py](assets/v0.5_winning_arch/gemini-3.8-flash/model.py) | [experiment.yaml](assets/v0.5_winning_arch/gemini-3.8-flash/experiment.yaml) |
-| GPT-5.6 Sol | [model.py](assets/v0.5_winning_arch/gpt-5.6-sol/model.py) | [experiment.yaml](assets/v0.5_winning_arch/gpt-5.6-sol/experiment.yaml) |
-| Qwen 3.8 Flash | [model.py](assets/v0.5_winning_arch/qwen3.8-flash/model.py) | [experiment.yaml](assets/v0.5_winning_arch/qwen3.8-flash/experiment.yaml) |
+| Claude Opus 5.5 | [model.py](assets/v0.5_winners/claude-opus-5-5/model.py) | [experiment.yaml](assets/v0.5_winners/claude-opus-5-5/experiment.yaml) |
+| Claude Sonnet 5 | [model.py](assets/v0.5_winners/claude-sonnet-5/model.py) | [experiment.yaml](assets/v0.5_winners/claude-sonnet-5/experiment.yaml) |
+| DeepSeek V4.1 Flash | [model.py](assets/v0.5_winners/deepseek-v4.1-flash/model.py) | [experiment.yaml](assets/v0.5_winners/deepseek-v4.1-flash/experiment.yaml) |
+| Gemini 3.8 Flash | [model.py](assets/v0.5_winners/gemini-3.8-flash/model.py) | [experiment.yaml](assets/v0.5_winners/gemini-3.8-flash/experiment.yaml) |
+| GPT-5.6 Sol | [model.py](assets/v0.5_winners/gpt-5.6-sol/model.py) | [experiment.yaml](assets/v0.5_winners/gpt-5.6-sol/experiment.yaml) |
+| Qwen 3.8 Flash | [model.py](assets/v0.5_winners/qwen3.8-flash/model.py) | [experiment.yaml](assets/v0.5_winners/qwen3.8-flash/experiment.yaml) |
 
-Each `model.py` defines a neural network and exposes `build_model(n_channels, n_samples, n_classes)`. The [manifest](assets/v0.5_winning_arch/manifest.json) records candidate IDs, validation scores, source hashes, input shapes, and class labels. Its `model_file` paths are relative to `assets/v0.5_winning_arch/`.
+Each `model.py` defines a neural network and exposes `build_model(n_channels, n_samples, n_classes)`. The [manifest](assets/v0.5_winners/manifest.json) records candidate IDs, validation scores, source hashes, input shapes, and class labels. Its `model_file` paths are relative to `assets/v0.5_winners/`.
 
 The saved `experiment.yaml` files document the original searches, which used full-budget independent task training. For a new search with PEEK, use the presets under `config/experiments/`. The manifest’s `experiment_config` paths are relative to the repository root; `config/...` paths inside each saved experiment file resolve from the repository root.
 
@@ -115,7 +110,7 @@ from pathlib import Path
 
 import torch
 
-root = Path("assets/v0.5_winning_arch")
+root = Path("assets/v0.5_winners")
 records = json.loads((root / "manifest.json").read_text())["architectures"]
 record = next(row for row in records if row["search_name"] == "claude-opus-5-5")
 task = record["tasks"]["emotion"]
